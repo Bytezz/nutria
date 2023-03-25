@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/RelativeMargin/RelativeMargin.gd" type="Script" id=1]
+[ext_resource path="res://scenes/top_bar/BatteryPercentage.gd" type="Script" id=2]
+[ext_resource path="res://scenes/top_bar/Time.gd" type="Script" id=3]
+[ext_resource path="res://scenes/top_bar/UserButton.gd" type="Script" id=4]
+
+[node name="top_bar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0.784314 )
+
+[node name="RelativeMargin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 0
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 0
+script = ExtResource( 1 )
+maxTop = inf
+marginRight = 0.01
+maxRight = inf
+maxBottom = inf
+marginLeft = 0.01
+maxLeft = inf
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RelativeMargin"]
+margin_left = 10.0
+margin_right = 1014.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UserButton" type="Button" parent="RelativeMargin/HBoxContainer"]
+margin_right = 42.0
+margin_bottom = 600.0
+text = "User"
+flat = true
+script = ExtResource( 4 )
+
+[node name="StatusContainer" type="HBoxContainer" parent="RelativeMargin/HBoxContainer"]
+margin_left = 972.0
+margin_right = 1004.0
+margin_bottom = 600.0
+size_flags_horizontal = 10
+
+[node name="BatteryPercentage" type="Label" parent="RelativeMargin/HBoxContainer/StatusContainer"]
+margin_top = 293.0
+margin_right = 28.0
+margin_bottom = 307.0
+text = "50%"
+script = ExtResource( 2 )
+
+[node name="BatteryIcon" type="TextureRect" parent="RelativeMargin/HBoxContainer/StatusContainer"]
+margin_left = 32.0
+margin_right = 32.0
+margin_bottom = 600.0
+
+[node name="Time" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "12:50"
+align = 1
+valign = 1
+script = ExtResource( 3 )

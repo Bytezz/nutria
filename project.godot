@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Fader",
+"language": "GDScript",
+"path": "res://addons/Fader/fader.gd"
+} ]
+_global_script_class_icons={
+"Fader": ""
+}
+
+[application]
+
+config/name="Nutria"
+config/description="Lutris 10ft GUI"
+run/main_scene="res://scenes/fade_intro/FadeIntro.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+LutrisApi="*res://AutoLoad/LutrisApi.gd"
+
+[display]
+
+window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/ActionIcon/plugin.cfg", "res://addons/RelativeMargin/plugin.cfg", "res://addons/SafeArea/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="Nutria"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"
