@@ -75,3 +75,5 @@ text = "12:50"
 align = 1
 valign = 1
 script = ExtResource( 3 )
+
+[connection signal="pressed" from="RelativeMargin/HBoxContainer/UserButton" to="RelativeMargin/HBoxContainer/UserButton" method="_on_UserButton_pressed"]
