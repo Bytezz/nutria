@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/RelativeMargin/RelativeMargin.gd" type="Script" id=1]
 [ext_resource path="res://scenes/top_bar/BatteryPercentage.gd" type="Script" id=2]
 [ext_resource path="res://scenes/top_bar/Time.gd" type="Script" id=3]
 [ext_resource path="res://scenes/top_bar/UserButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/top_bar/settings.png" type="Texture" id=5]
+[ext_resource path="res://scenes/top_bar/battery.png" type="Texture" id=6]
 
 [node name="top_bar" type="Control"]
 anchor_right = 1.0
@@ -41,15 +43,28 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="UserButton" type="Button" parent="RelativeMargin/HBoxContainer"]
-margin_right = 42.0
+[node name="SettingsContainer" type="HBoxContainer" parent="RelativeMargin/HBoxContainer"]
+margin_right = 61.0
+margin_bottom = 600.0
+
+[node name="SettingsIcon" type="TextureRect" parent="RelativeMargin/HBoxContainer/SettingsContainer"]
+margin_right = 15.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="UserButton" type="Button" parent="RelativeMargin/HBoxContainer/SettingsContainer"]
+margin_left = 19.0
+margin_right = 61.0
 margin_bottom = 600.0
 text = "User"
 flat = true
 script = ExtResource( 4 )
 
 [node name="StatusContainer" type="HBoxContainer" parent="RelativeMargin/HBoxContainer"]
-margin_left = 972.0
+margin_left = 957.0
 margin_right = 1004.0
 margin_bottom = 600.0
 size_flags_horizontal = 10
@@ -63,8 +78,12 @@ script = ExtResource( 2 )
 
 [node name="BatteryIcon" type="TextureRect" parent="RelativeMargin/HBoxContainer/StatusContainer"]
 margin_left = 32.0
-margin_right = 32.0
+margin_right = 47.0
 margin_bottom = 600.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
 
 [node name="Time" type="Label" parent="."]
 anchor_right = 1.0
@@ -76,4 +95,4 @@ align = 1
 valign = 1
 script = ExtResource( 3 )
 
-[connection signal="pressed" from="RelativeMargin/HBoxContainer/UserButton" to="RelativeMargin/HBoxContainer/UserButton" method="_on_UserButton_pressed"]
+[connection signal="pressed" from="RelativeMargin/HBoxContainer/SettingsContainer/UserButton" to="RelativeMargin/HBoxContainer/SettingsContainer/UserButton" method="_on_UserButton_pressed"]
