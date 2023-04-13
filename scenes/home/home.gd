@@ -15,7 +15,6 @@ func _notification(what):
 			var tmp = get_focus_owner()
 			if not tmp == null:
 				old_focused = tmp
-				print(old_focused)
 				old_focused.release_focus()
 		MainLoop.NOTIFICATION_WM_FOCUS_IN:
 			if not old_focused == null:
