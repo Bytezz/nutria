@@ -8,7 +8,7 @@
 [ext_resource path="res://addons/ActionIcon/Keyboard/Blank.png" type="Texture" id=6]
 [ext_resource path="res://addons/ActionIcon/ActionIcon.gd" type="Script" id=7]
 [ext_resource path="res://assets/fonts/Gidole/Gidole-Regular-mid.tres" type="DynamicFont" id=8]
-[ext_resource path="res://assets/backgrounds/jupiter.jpg" type="Texture" id=9]
+[ext_resource path="res://assets/backgrounds/Assorted_Jellyfish.jpg" type="Texture" id=9]
 
 [node name="Home" type="Control"]
 anchor_right = 1.0

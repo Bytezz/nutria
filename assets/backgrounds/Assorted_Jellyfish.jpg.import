@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jupiter.jpg-d2c904ea9d5a0adfacbe80184cb8c7fd.stex"
+path="res://.import/Assorted_Jellyfish.jpg-80555fcf2f9e31c1376106f0a1ccc002.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/jupiter.jpg"
-dest_files=[ "res://.import/jupiter.jpg-d2c904ea9d5a0adfacbe80184cb8c7fd.stex" ]
+source_file="res://assets/backgrounds/Assorted_Jellyfish.jpg"
+dest_files=[ "res://.import/Assorted_Jellyfish.jpg-80555fcf2f9e31c1376106f0a1ccc002.stex" ]
 
 [params]
 
