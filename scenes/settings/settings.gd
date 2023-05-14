@@ -1,8 +1,8 @@
 extends Control
 
 func _ready():
-	$SafeArea/CenterContainer/VBoxContainer/Button.grab_focus()
+	$SafeArea/RelativeMargin/VBoxContainer/HBoxContainer/DoneBtn.grab_focus()
 
-func _on_Button_pressed():
+func _on_DoneBtn_pressed():
 	get_tree().get_nodes_in_group("IconLaunchers")[0].grab_focus()
 	queue_free()
