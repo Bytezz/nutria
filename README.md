@@ -8,7 +8,6 @@ Lutris gamepad oriented UI made with Godot Engine.
 
 ## Todo
 
-- Screenshot
 - Options menu
 - Fast start (loading things inside intro)
 - Read real play time
